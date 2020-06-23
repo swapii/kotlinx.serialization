@@ -20,5 +20,5 @@ project(':kotlinx-serialization-runtime-configparser').projectDir = file('./form
 //include ':kotlinx-serialization-properties'
 //project(':kotlinx-serialization-properties').projectDir = file('./formats/properties')
 
-include ':benchmark'
-project(':benchmark').projectDir = file('./benchmark')
+//include ':benchmark'
+//project(':benchmark').projectDir = file('./benchmark')
