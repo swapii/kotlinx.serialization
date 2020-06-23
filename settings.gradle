@@ -17,8 +17,8 @@ project(':kotlinx-serialization-runtime').projectDir = file('./runtime')
 include ':kotlinx-serialization-runtime-configparser'
 project(':kotlinx-serialization-runtime-configparser').projectDir = file('./formats/config')
 
-include ':kotlinx-serialization-properties'
-project(':kotlinx-serialization-properties').projectDir = file('./formats/properties')
+//include ':kotlinx-serialization-properties'
+//project(':kotlinx-serialization-properties').projectDir = file('./formats/properties')
 
 include ':benchmark'
 project(':benchmark').projectDir = file('./benchmark')
