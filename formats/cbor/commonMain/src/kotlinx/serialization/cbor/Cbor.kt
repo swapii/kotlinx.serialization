@@ -395,7 +395,7 @@ public class Cbor(
     /**
      * Serializes [value] to CBOR bytes using given [serializer].
      */
-    override fun <T> dump(serializer: SerializationStrategy<T>, value: T): ByteArray {
+    override fun <T> encodeToByteArray(serializer: SerializationStrategy<T>, value: T): ByteArray {
         val output = ByteArrayOutput()
         val dumper = CborWriter(CborEncoder(output))
         dumper.encode(serializer, value)
@@ -405,7 +405,7 @@ public class Cbor(
     /**
      * Loads value of type [T] from given CBOR [bytes] using [deserializer].
      */
-    override fun <T> load(deserializer: DeserializationStrategy<T>, bytes: ByteArray): T {
+    override fun <T> decodeFromByteArray(deserializer: DeserializationStrategy<T>, bytes: ByteArray): T {
         val stream = ByteArrayInput(bytes)
         val reader = CborReader(CborDecoder(stream))
         return reader.decode(deserializer)

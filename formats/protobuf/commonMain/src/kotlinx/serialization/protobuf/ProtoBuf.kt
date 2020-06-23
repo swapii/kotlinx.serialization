@@ -581,14 +581,14 @@ public class ProtoBuf(
         internal const val i32 = 5
     }
 
-    override fun <T> dump(serializer: SerializationStrategy<T>, value: T): ByteArray {
+    override fun <T> encodeToByteArray(serializer: SerializationStrategy<T>, value: T): ByteArray {
         val output = ByteArrayOutput()
         val encoder = ProtobufEncoder(ProtobufWriter(output), serializer.descriptor)
         encoder.encode(serializer, value)
         return output.toByteArray()
     }
 
-    override fun <T> load(deserializer: DeserializationStrategy<T>, bytes: ByteArray): T {
+    override fun <T> decodeFromByteArray(deserializer: DeserializationStrategy<T>, bytes: ByteArray): T {
         val input = ByteArrayInput(bytes)
         val decoder = ProtobufDecoder(ProtobufReader(input), deserializer.descriptor)
         return decoder.decode(deserializer)
