@@ -68,11 +68,11 @@ kotlin {
 //            }
 //        }
 
-        jsTest {
-            dependencies {
-                api 'org.jetbrains.kotlin:kotlin-test-js'
-            }
-        }
+//        jsTest {
+//            dependencies {
+//                api 'org.jetbrains.kotlin:kotlin-test-js'
+//            }
+//        }
 
         nativeMain.dependencies {
         }
