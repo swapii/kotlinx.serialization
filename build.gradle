@@ -140,7 +140,7 @@ subprojects {
     apply from: rootProject.file('gradle/teamcity.gradle')
     // Configure publishing for some artifacts
     if (project.name.contains("benchmark")) return
-    apply from: rootProject.file('gradle/publishing.gradle')
+    //apply from: rootProject.file('gradle/publishing.gradle')
 }
 
 apply from: rootProject.file('gradle/compilerVersion.gradle')
