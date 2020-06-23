@@ -44,7 +44,7 @@ kotlin {
             addTarget(presets.mingwX86)
 
             // WASM
-            addTarget(presets.wasm32)
+            //addTarget(presets.wasm32)
         }
     }
 
